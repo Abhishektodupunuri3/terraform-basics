@@ -1,4 +1,4 @@
-/*
+
     variable "sample" {
         default = "Welcome To Terraform"
     }
@@ -6,7 +6,7 @@
     output "sample_output" {
         value = var.sample
     }
-
+/*
     variable "sample_op" {
         default = "Welcome to terraform training"
     }
