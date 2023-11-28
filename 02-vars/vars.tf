@@ -9,7 +9,7 @@
 
  
 
-    output "sample_var_op" {
+    output "sample_op" {
         value = "Value of the variable is ${var.sample_op}"
     }
 
