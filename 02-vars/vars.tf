@@ -1,4 +1,4 @@
-variable "sample  {
+variable "sample"  {
     default = "Welcome to Terraform"
 }
 
