@@ -6,7 +6,7 @@
     output "sample_output" {
         value = var.sample
     }
-/*
+
     variable "sample_op" {
         default = "Welcome to terraform training"
     }
@@ -14,7 +14,7 @@
     output "sample_var_op" {
         value = "Value of the variable is ${var.sample_op}"
     }
-*/
+
    # variable "test" {}  // Empty Variable
 
 # A Variable can be accessed directly by calling it as var.variableName, but if you're accessing in between a set of strings, then you need to enclose them in quotes and it should referred using ${var.VarName}
