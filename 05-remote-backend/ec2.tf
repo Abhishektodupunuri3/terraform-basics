@@ -3,6 +3,6 @@ resource "aws_instance" "remote-app" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Linux_Server_With_Remote_Backend"
+    Name = "Linux_Server_Remote_Backend"
   }
 }
