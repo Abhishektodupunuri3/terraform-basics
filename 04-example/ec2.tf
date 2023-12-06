@@ -2,7 +2,7 @@
 resource "aws_instance" "app_server" {
     ami                     = "ami-086e7126e24c09b4c"
     instance_type           = "t2.micro"
-    vpc_security_group_ids  = ["aws_security_group.allow_all.id"] 
+    vpc_security_group_ids  = [aws_security_group.allow_all.id] 
 
     tags  ={
         Name = "TerrafromServer"
