@@ -6,3 +6,7 @@ resource "aws_instance" "sample" {
 }
 
 variable   "sg"  {}             # step 3 : Now to use this info, declare an empty variable and use it ( in root module, we have declared " sg = var.sgid )
+
+output "public_ip"  {
+    value = aws_instance.sample.public_ip
+}
