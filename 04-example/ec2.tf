@@ -9,7 +9,12 @@ resource "aws_instance" "app_server" {
     }
 }
 
-# Creates a Security Group
+output "private_ip_address" {
+  value = aws_instance.server.private_ip
+}
+
+
+# CREATES SECURITY GROUP
 resource "aws_security_group" "allow_all" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
