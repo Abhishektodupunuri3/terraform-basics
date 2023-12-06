@@ -10,7 +10,7 @@ resource "aws_instance" "app_server" {
 }
 
 output "private_ip_address" {
-  value = "aws_instance.server.private_ip"
+  value = aws_instance.server.private_ip
 }
 
 
