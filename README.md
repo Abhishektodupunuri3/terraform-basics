@@ -179,7 +179,7 @@ This helps in extracting the information of the already existing resources and u
 ### Provisioners In Terraform 
 
 ```
-Provisioners are used to execure actions on the local machine or on a remote machine in order to prepare servers or other infrastructure objects for service.
+Provisioners are used to execute actions on the local machine or on a remote machine in order to prepare servers or other infrastructure objects for service.
 
     1) Remote Provisioners
     2) Local Provisioners
@@ -189,8 +189,8 @@ Provisioners are used to execure actions on the local machine or on a remote mac
 
 ***NOTE***
 ```
-Provisioners are by default create-time, which means they will only be executed during the infra creation only and it's wont be run again.
-We also have comething called destroy-time provisioners, which means they will only be executed during the infra destroy only
+Provisioners are by default create-time, which means they will only be executed during the infra creation only and it wont be run again.
+We also have something called destroy-time provisioners, which means they will only be executed during the infra destroy only
 
 But using triggers, we can control when they can triggered.
 ```
@@ -208,7 +208,7 @@ But using triggers, we can control when they can triggered.
 4) If your provisioner runs outside the infra, in this case even if your provisioner fails because of any reason, terraform records this particular event as failure and marks it as tained against that particular provisioner only. In this case, your resource won't be subjected to failure.
 
 
-PS : Provisioner can only run inside a resource, but we have some dummy resources like `NULL RESOURCR` to host these kind of activities.
+PS : Provisioner can only run inside a resource, but we have some dummy resources like `NULL RESOURCE` to host these kind of activities.
 ```
 
 
