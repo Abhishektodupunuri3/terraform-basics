@@ -8,7 +8,7 @@ resource "aws_spot_instance_request" "spot_worker" {
   tags = {
     Name = var.COMPONENT
   }
-
+}
 #   # This will be executed on the top of the machine once it's created
   provisioner "remote-exec" {
 
@@ -23,8 +23,8 @@ resource "aws_spot_instance_request" "spot_worker" {
     inline = [
       "ansible-pull -U https://github.com/Abhishektodupunuri3/ansible.git -e ROOT_PASSWORD=RoboShop@1 -e ENV=dev -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION} roboshop-pull.yml"
     ]
-  }
 }
+
 
 # resource "aws_instance" "sample" {
 #   ami                     = data.aws_ami.image.id
