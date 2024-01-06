@@ -1,5 +1,5 @@
 # Creates EC2 SPOT Instance
-resource "aws_spot_instance_request" "spot_worker" {
+resource "aws_instance" "server"  {
   ami                        = data.aws_ami.image.id
   instance_type              = "t3.micro"
   vpc_security_group_ids     = [aws_security_group.allows_all.id]
@@ -23,7 +23,7 @@ resource "aws_spot_instance_request" "spot_worker" {
     inline = [
       "ansible-pull -U https://github.com/Abhishektodupunuri3/ansible.git -e ROOT_PASSWORD=RoboShop@1 -e ENV=dev -e COMPONENT=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION} roboshop-pull.yml"
     ]
-}
+  }
 
 
 # resource "aws_instance" "sample" {
